@@ -15,8 +15,3 @@ export const deleteTodo = (id)=>{
        
     }
 }
-export const removeTodo = ()=>{
-    return {
-        type: "removetodo"
-    }
-}

@@ -3,25 +3,52 @@ import { FaPlus } from "react-icons/fa";
 import { FaTrashAlt } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import {addTodo,deleteTodo,removeTodo} from "../Action/index";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import TimePicker from 'react-time-picker';
+import "react-time-picker/dist/TimePicker.css";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
+import Button from '@material-ui/core/Button';
+import SaveIcon from '@material-ui/icons/Save';
+
+
+
+
+
 
 
 const Todo = ()=> {
     const [inputData, setInputData] = useState('');
+    
     const list = useSelector ((state)=> state.TodoRed.list);
     const dispatch = useDispatch();
-
+    const [descData, setDescData] = useState('');
+    const [startDate, setStartDate] = useState(new Date());
+    const [value, onChange] = useState('10:00');
+    const options = [
+      'manas sahoo', 'deepak parida', 'chandan parida'
+    ];
+    const defaultOption = options[0];
     return (
         <>
         
     <div className ="min_div">
       <div className = "child_div">
-        <h2>Add Your List</h2>
+        
           <div className = " addItem">
-            <input type = "text" placeholder = "add items"  value = {inputData}
-            onChange = {(event) => setInputData(event.target.value) }/>
+            <h2>Task </h2>
+           
+           <div>
             <FaPlus onClick ={ () => dispatch(addTodo(inputData),
               setInputData(''))}/>
-            </div>
+              </div>
+              
+            
+                        </div>
+     
+
+  
       <div className = " ShowItems">
         {
           list.map ((elem)=> {
@@ -29,7 +56,57 @@ const Todo = ()=> {
 
             <div className = "eachItem">
            <h3> {elem.data} </h3>
-          <FaTrashAlt onClick ={ () => dispatch(deleteTodo(elem.id),
+
+           <div className = "task">
+                        <div className = "descp_data">
+                        <h2>Task Description</h2>
+               <input type = "text" placeholder = "add items"  value = {descData}
+               onChange = {(event) => setDescData(event.target.value) }
+            />
+            </div>
+          
+           
+
+    <div className ="date_time">
+    <div className = "date">
+      <h2>Date</h2>
+     
+    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+    </div>
+    <div className = "time">
+      <h2>Time</h2>
+     
+      <TimePicker
+        onChange={onChange}
+        value={value}
+      />
+      </div>
+    </div>
+    <div className = "dropdrown">
+      <h2>Assign user</h2>
+    <Dropdown options={options}  value={defaultOption} placeholder="Select an option" />
+   </div>
+   <div className="button">
+   <div className ="cancel_button">
+   <Button variant="contained">cancel</Button>
+   </div>
+   <div className="save_button">
+   <Button
+        onClick ={ () => dispatch(addTodo(inputData),
+          setInputData(''))}
+        variant="contained"
+        color="primary"
+        size="large"
+       
+        
+        startIcon={<SaveIcon  />}
+      >
+        Save
+      </Button>
+      </div>
+      </div>
+      </div>
+      <FaTrashAlt onClick ={ () => dispatch(deleteTodo(elem.id),
             )}/>
           </div>
          )
@@ -38,6 +115,11 @@ const Todo = ()=> {
            
 
               </div>
+
+          {/*same item */}
+                  
+         
+           
             </div>
             </div>
         </>
