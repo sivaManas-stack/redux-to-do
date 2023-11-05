@@ -8,7 +8,8 @@ import {addTodo,deleteTodo,removeTodo} from "../Action/index";
 const Todo = ()=> {
     const [inputData, setInputData] = useState('');
     const list = useSelector ((state)=> state.TodoRed.list);
-    const dispatch = useDispatch();
+     const dispatch = useDispatch();
+
 
     return (
         <>
@@ -17,24 +18,33 @@ const Todo = ()=> {
       <div className = "child_div">
         <h2>Add Your List</h2>
           <div className = " addItem">
-            <input type = "text" placeholder = "add items"  value = {inputData}
-            onChange = {(event) => setInputData(event.target.value) }/>
-            <FaPlus onClick ={ () => dispatch(addTodo(inputData),
-              setInputData(''))}/>
-            </div>
+            <p>FirstName:
+            <input type = "text" placeholder = "Items value"  value = {inputData}
+             onChange = {(event) => setInputData(event.target.value) }/>
+             </p>
+             
+            <div className="plus">
+            <button onClick ={ () => dispatch(addTodo(inputData),
+              setInputData(''))}> ADD</button>
+              
+              </div>
+              </div>
       <div className = " ShowItems">
         {
           list.map ((elem)=> {
          return (
-
-            <div className = "eachItem">
+       <div className = "eachItem">
            <h3> {elem.data} </h3>
           <FaTrashAlt onClick ={ () => dispatch(deleteTodo(elem.id),
             )}/>
-          </div>
+            <div>
+            <button >EDIT</button>
+            </div>
+           </div>
          )
           })
-  }
+        },
+  
            
 
               </div>

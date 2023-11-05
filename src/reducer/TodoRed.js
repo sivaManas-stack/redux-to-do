@@ -4,6 +4,7 @@ const initialData = {
 
 
 
+
 const Todored = (state= initialData,action) => {
        switch (action.type) {
            case "Addtodo":
@@ -19,6 +20,9 @@ const Todored = (state= initialData,action) => {
                    ]
                 
                }
+              
+                
+               
                case "Deletetodo":
              const newList  = state.list.filter((elem) => elem.id !== action.id)
                 return {
@@ -26,6 +30,7 @@ const Todored = (state= initialData,action) => {
                     list: newList
                  
                 }
+               
 
                default: return state;
        } 

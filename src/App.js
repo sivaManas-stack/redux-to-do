@@ -6,7 +6,10 @@ const App = ()=> {
  
   return(
     <>
-    <h1>Redusa app </h1>
+    <div align="center">
+    <h1>Welcome to Redux Life </h1>
+    <h2>write some good cood</h2>
+    </div>
     <Todo/>
         </>
   );
