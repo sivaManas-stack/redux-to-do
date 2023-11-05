@@ -1,11 +1,15 @@
 
 .min_div {
   margin-left:200px ;
+<<<<<<< HEAD
  
+=======
+>>>>>>> 1de2219fb138fb165e2b7624b882b7eebbaa28a3
   margin-right: 400px;
   padding: 50px;
 }
 .addItem {
+<<<<<<< HEAD
   margin-left:50px;
   margin-bottom: 20px;
   border:10px;
@@ -15,11 +19,29 @@
   padding-bottom: 10px;
   
 
+=======
+  border: 1px solid violet;
+  margin-left:10px;
+  padding:2px;
+  width:430px;
+  height:90px;
+  
+ 
+>>>>>>> 1de2219fb138fb165e2b7624b882b7eebbaa28a3
 }
-h2 {
-  margin-left: 30px;
+
+
+.addItem > div {
+
+ margin-bottom: 10px;
+  margin-left: 350px;
+  
+  
 }
+
+
 .eachItem {
+<<<<<<< HEAD
   margin-top: 100px;
   margin-right: 80px;
   margin-left: 80px;
@@ -45,3 +67,66 @@ h2 {
   margin-left: 10px;
   padding: 10px;
 }
+=======
+  border:none;
+  width:100%;
+  padding:10px;
+  outline: 0;
+  font-size: medium;
+  margin-bottom: 20px;
+  
+  margin: 50px;
+}
+.ShowItems {
+ 
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+} 
+.eachItem {
+ 
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+.date_time {
+  display:flex;
+  margin-top: 26px;
+}
+.time {
+  margin-left: 30px;
+}
+.dropdrown {
+  margin-top: 20px;
+  width: 300px;
+
+  
+}
+.button {
+  display: flex;
+  margin-top: 30px;
+}
+.save_button {
+  margin-left: 40px;
+}
+.task {
+  margin-top: 10px;
+  border:none;
+    width:50%;
+    padding:10px;
+    outline: 0;
+    font-size: medium;
+    background-color:rgb(202, 241, 240);
+
+}
+.descp_data {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.descp_data > input {
+  width: 100%;
+}
+>>>>>>> 1de2219fb138fb165e2b7624b882b7eebbaa28a3
