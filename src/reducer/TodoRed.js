@@ -21,15 +21,13 @@ const Todored = (state= initialData,action) => {
                    ]
                 
                }
-<<<<<<< HEAD
+
               
                 
                
-=======
 
 
 
->>>>>>> 1de2219fb138fb165e2b7624b882b7eebbaa28a3
                case "Deletetodo":
              const newList  = state.list.filter((elem) => elem.id !== action.id)
                 return {

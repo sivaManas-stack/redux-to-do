@@ -15,12 +15,10 @@ export const deleteTodo = (id)=>{
        
     }
 }
-<<<<<<< HEAD
+
 export const removeTodo = ()=>{
     return {
         type: "removetodo"
     }
 }
 //
-=======
->>>>>>> 1de2219fb138fb165e2b7624b882b7eebbaa28a3

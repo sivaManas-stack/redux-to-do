@@ -22,11 +22,9 @@ const Todo = ()=> {
     const [inputData, setInputData] = useState('');
     
     const list = useSelector ((state)=> state.TodoRed.list);
-<<<<<<< HEAD
-     const dispatch = useDispatch();
 
 
-=======
+
     const dispatch = useDispatch();
     const [descData, setDescData] = useState('');
     const [startDate, setStartDate] = useState(new Date());
@@ -35,7 +33,7 @@ const Todo = ()=> {
       'manas sahoo', 'deepak parida', 'chandan parida'
     ];
     const defaultOption = options[0];
->>>>>>> 1de2219fb138fb165e2b7624b882b7eebbaa28a3
+
     return (
         <>
         
@@ -43,7 +41,6 @@ const Todo = ()=> {
       <div className = "child_div">
         
           <div className = " addItem">
-<<<<<<< HEAD
             <p>FirstName:
             <input type = "text" placeholder = "Items value"  value = {inputData}
              onChange = {(event) => setInputData(event.target.value) }/>
@@ -65,10 +62,7 @@ const Todo = ()=> {
               
             
                         </div>
-     
-
-  
->>>>>>> 1de2219fb138fb165e2b7624b882b7eebbaa28a3
+    
       <div className = " ShowItems">
         {
           list.map ((elem)=> {
@@ -144,7 +138,7 @@ const Todo = ()=> {
          
            
             </div>
-            </div>
+            
         </>
     );
 };
